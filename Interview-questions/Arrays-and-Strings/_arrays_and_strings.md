@@ -48,6 +48,7 @@ bool IsUnique(string str)
 {
     return str.GroupBy(c => c).All(g => g.Count() == 1);
 }
+
 //using HashSet data structure
 bool IsUnique(string str)
 {
@@ -62,6 +63,7 @@ bool IsUnique(string str)
     }
     return true;
 }
+
 // O(n^2) time complexity
 // Compare every character of the string to every other character of the string. This will take 0(n2) time and 0(1) space.
 bool IsUnique(string str)
@@ -84,7 +86,7 @@ bool IsUnique(string str)
     return true;
 }
 
-//If we are allowed to modify the input string, we could sort the string in O(nlog(n)) time and then
+// If we are allowed to modify the input string, we could sort the string in O(nlog(n)) time and then
 // linearly check the string for neighboring characters that are identical. Careful, though: many sorting
 // algorithms take up extra space.
 bool IsUnique(string str)
